@@ -1,7 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    devtools: { enabled: true },
-   // Возможность подключения сторонних ресурсов непосредственнр в head
+   // components: [
+   //    // импорт компонентов, основываясь только на их имени, а не на пути (pathPrefix: false)
+   //    {
+   //       path: "~/components",
+   //       pathPrefix: false,
+   //    },
+   //    // Импорт компонентов из других директорий, помимо components
+   //    { path: "~/calendar-module/components" },
+   //    { path: "~/user-module/components", pathPrefix: false },
+   //    { path: "~/components/special-components", prefix: "Special" },
+   // ],
+   // Возможность подключения сторонних ресурсов и дополнительных мета тегов непосредственно в head
    app: {
       pageTransition: { name: "page", mode: "out-in" },
       head: {

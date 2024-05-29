@@ -6,6 +6,8 @@
    </NuxtLayout>
 </template>
 <script setup lang="ts">
+// Исключить функцию автоматического импорта, импортируя из '#components'
+// import { NuxtLink, LazyMountainsList } from "#components";
 // useSeoMeta({
 //    title: "My Amazing Site",
 //    ogTitle: "My Amazing Site",
