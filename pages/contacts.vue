@@ -3,7 +3,7 @@
 </template>
 
 <script setup>
-definePageMeta({
-   layout: "custom",
-});
+// definePageMeta({
+//    layout: "custom",
+// });
 </script>

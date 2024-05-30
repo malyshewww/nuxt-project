@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-   devtools: { enabled: true },
+   devtools: { enabled: false },
    // components: [
    //    // импорт компонентов, основываясь только на их имени, а не на пути (pathPrefix: false)
    //    {
@@ -12,15 +12,12 @@ export default defineNuxtConfig({
    //    { path: "~/user-module/components", pathPrefix: false },
    //    { path: "~/components/special-components", prefix: "Special" },
    // ],
+   modules: ["@pinia/nuxt"],
    // Возможность подключения сторонних ресурсов и дополнительных мета тегов непосредственно в head
    app: {
-      pageTransition: { name: "page", mode: "out-in" },
+      // pageTransition: { name: "page", mode: "out-in" },
       head: {
          link: [
-            // {
-            //    rel: "stylesheet",
-            //    href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css",
-            // },
             {
                rel: "preload",
                href: "/fonts/Montserrat-Regular.woff2",
@@ -31,6 +28,10 @@ export default defineNuxtConfig({
          ],
          meta: [
             { charset: "utf-8" },
+            {
+               "http-equiv": "X-UA-Compatible",
+               content: "IE=edge",
+            },
             {
                name: "viewport",
                content: "width=device-width, initial-scale=1, user-scalable=no",
@@ -65,6 +66,10 @@ export default defineNuxtConfig({
                name: "format-detection",
                content: "date=no",
             },
+            {
+               name: "robots",
+               content: "noindex,follow",
+            },
          ],
       },
    },
@@ -79,4 +84,5 @@ export default defineNuxtConfig({
          },
       },
    },
+   defaultLocale: "ru",
 });
