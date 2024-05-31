@@ -11,6 +11,8 @@
    },
    "dependencies": {
       "@fancyapps/ui": "^5.0.36",
+      "@nuxt/content": "^2.12.1",
+      "@nuxt/ui": "^2.16.0",
       "@pinia/nuxt": "^0.5.1",
       "nuxt": "^3.11.2",
       "swiper": "^11.1.3",

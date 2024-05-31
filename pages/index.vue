@@ -1,10 +1,11 @@
 <template>
    <h1>Главная</h1>
-   <ul>
+   <ContentDoc />
+   <!-- <ul>
       <li v-for="p in productsStore.products" :key="p.id">
          {{ p.title }}
       </li>
-   </ul>
+   </ul> -->
 </template>
 
 <script setup lang="ts">

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
    //    { path: "~/user-module/components", pathPrefix: false },
    //    { path: "~/components/special-components", prefix: "Special" },
    // ],
-   modules: ["@pinia/nuxt"],
+   modules: ["@pinia/nuxt", "@nuxt/content"],
    // Возможность подключения сторонних ресурсов и дополнительных мета тегов непосредственно в head
    app: {
       // pageTransition: { name: "page", mode: "out-in" },
