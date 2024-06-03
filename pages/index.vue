@@ -9,6 +9,11 @@
 </template>
 
 <script setup lang="ts">
+useHead({
+   bodyAttrs: {
+      class: `page--home`,
+   },
+});
 const productsStore = useProductsStore();
 productsStore.fetchProductsFromDB();
 </script>

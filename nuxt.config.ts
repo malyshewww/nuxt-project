@@ -1,17 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
    devtools: { enabled: false },
-   // components: [
-   //    // импорт компонентов, основываясь только на их имени, а не на пути (pathPrefix: false)
-   //    {
-   //       path: "~/components",
-   //       pathPrefix: false,
-   //    },
-   //    // Импорт компонентов из других директорий, помимо components
-   //    { path: "~/calendar-module/components" },
-   //    { path: "~/user-module/components", pathPrefix: false },
-   //    { path: "~/components/special-components", prefix: "Special" },
-   // ],
+   components: [
+      // импорт компонентов, основываясь только на их имени, а не на пути (pathPrefix: false)
+      {
+         path: "~/components",
+         pathPrefix: true,
+      },
+      // Импорт компонентов из других директорий, помимо components
+      { path: "~/sections", pathPrefix: true },
+      // { path: "~/user-module/components", pathPrefix: false },
+      // { path: "~/components/special-components", prefix: "Special" },
+   ],
    modules: ["@pinia/nuxt", "@nuxt/content"],
    // Возможность подключения сторонних ресурсов и дополнительных мета тегов непосредственно в head
    app: {
@@ -85,4 +85,13 @@ export default defineNuxtConfig({
       },
    },
    defaultLocale: "ru",
+   build: {
+      postcss: {
+         preset: {
+            autoprefixer: {
+               grid: true,
+            },
+         },
+      },
+   },
 });
